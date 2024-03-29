@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resultado da Votação</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css"> <!-- Importa o arquivo CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    
+
+/* Estilos globais */
+* {
+	box-sizing: border-box; /* Garante que a caixa de modelo inclua as bordas e preenchimento */
+	margin: 0; /* Remove as margens padrão */
+}
+
+/* Estilos do corpo */
+body {
+	background: #eceff1; /* Cor de fundo do corpo */
+	display: flex; /* Define o modelo de layout flexível */
+	justify-content: center; /* Alinha o conteúdo horizontalmente ao centro */
+	align-items: center; /* Alinha o conteúdo verticalmente ao centro */
+	flex-direction: column; /* Define a direção dos itens na flexbox como coluna */
+	font-family: 'Montserrat', sans-serif; /* Define a fonte padrão */
+	height: 100vh; /* Altura do corpo ajustada para a altura da tela */
+}
+
+/* Estilos do título principal */
+h1 {
+	font-weight: bold; /* Define a espessura da fonte como negrito */
+	margin: 0; /* Remove as margens padrão */
+}
+
+/* Estilos do parágrafo */
+p {
+	font-size: 14px; /* Define o tamanho da fonte */
+	font-weight: 100; /* Define a espessura da fonte */
+	line-height: 20px; /* Define a altura da linha */
+	letter-spacing: 0.5px; /* Define o espaçamento entre letras */
+	margin: 20px 0 30px; /* Define as margens superior e inferior */
+}
+
+/* Estilos do texto pequeno */
+span {
+	font-size: 12px; /* Define o tamanho da fonte */
+}
+
+/* Estilos do link */
+a {
+	color: #333; /* Cor do texto */
+	font-size: 14px; /* Define o tamanho da fonte */
+	text-decoration: none; /* Remove a decoração do link */
+	margin: 15px 0; /* Define as margens superior e inferior */
+}
+
+/* Estilos do botão */
+button {
+    font-size: .9em; /* Define o tamanho da fonte */
+    color: #fff; /* Cor do texto */
+    background: #111827; /* Cor de fundo do botão */
+    outline: none; /* Remove o contorno */
+    border: 1px solid #050c01; /* Cor da borda */
+    cursor: pointer; /* Define o cursor ao passar */
+    padding: 0.9em; /* Define o preenchimento interno */
+    -webkit-appearance: none; /* Remove a aparência padrão do botão */
+    width: 25%; /* Largura do botão */
+    margin: 2em 0; /* Define as margens superior e inferior */
+    letter-spacing: 4px; /* Define o espaçamento entre letras */
+}
+
+/* Estilos do botão no hover */
+button[type="submit"]:hover {
+    -webkit-transition: .5s all; /* Transição suave */
+    -moz-transition: .5s all;
+    -o-transition: .5s all;
+    -ms-transition: .5s all;
+    transition: .5s all;
+    background: #0a010a; /* Cor de fundo do botão ao passar o mouse */
+}
+
+/* Estilos do contêiner principal */
+.container {
+	background-color: #fff; /* Cor de fundo do contêiner */
+	border-radius: 10px; /* Borda arredondada */
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22); /* Sombra */
+	position: relative; /* Define a posição como relativa */
+	overflow: hidden; /* Esconde o conteúdo que estoura do contêiner */
+	width: 768px; /* Largura fixa do contêiner */
+	max-width: 100%; /* Largura máxima do contêiner */
+	min-height: 600px; /* Altura mínima do contêiner */
+}
+
+/* Estilos da grade */
+.grid {
+	display: grid; /* Define o modelo de layout como grid */
+	grid-template-columns: repeat(3, 1fr); /* Define três colunas com largura igual */
+	grid-column-gap: 20px; /* Define o espaçamento horizontal entre as colunas */
+	grid-row-gap: 1em; /* Define o espaçamento vertical entre as linhas */
+}
+
+/* Estilos do cabeçalho e rodapé */
+header, footer {
+    background-color: #9b1616; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    width: 100%; /* Largura total */
+    padding: 20px 0; /* Preenchimento */
+    text-align: center; /* Alinhamento do texto */
+}
+
+/* Estilos do logotipo */
+.logo img {
+    max-width: 200px; /* Largura máxima do logotipo */
+}
+
+</style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/logo-removebg-preview.png" alt="Logo" height="70">
+        </div>
+    </header>
+    <div class="container">
+        <h2>Resultado da Votação</h2>
+        <button class="verde" onclick="resultado()">Mostrar Resultado</button>
+        <div id="resultado"></div>
+        <a href="index.html">Voltar</a>
+    </div>
+    <footer>
+        © 2022 Resultado da Votação. Todos os direitos reservados.
+    </footer>
+    <script src="codigo.js"></script> <!-- Importa o arquivo de script JavaScript -->
+</body>
+</html>

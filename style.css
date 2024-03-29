@@ -1,0 +1,113 @@
+/* Estilos globais */
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+/* Estilos do corpo */
+body {
+	background: #eceff1; /* Cor de fundo para o corpo da página */
+	display: flex; /* Usa o modelo flexbox para alinhar o conteúdo verticalmente */
+	justify-content: center; /* Centraliza horizontalmente */
+	align-items: center; /* Centraliza verticalmente */
+	flex-direction: column; /* Alinha os itens em colunas */
+	font-family: 'Montserrat', sans-serif; /* Define a fonte para o corpo do texto */
+	height: 100vh; /* Define a altura do corpo para 100% da altura da tela */
+}
+
+header, footer {
+    background-color: #9b1616; /* Cor de fundo para o cabeçalho e rodapé */
+    color: #fff; /* Cor do texto para o cabeçalho e rodapé */
+    width: 100%; /* Largura completa para ocupar a largura total da tela */
+    padding: 20px 0; /* Espaçamento interno de 20px na parte superior e inferior */
+    text-align: center; /* Centraliza o texto horizontalmente */
+}
+
+.container {
+    display: flex; /* Usa o modelo flexbox para alinhar o conteúdo verticalmente */
+    flex-direction: column; /* Alinha os itens em colunas */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    height: 100vh; /* Define a altura do contêiner para 100% da altura da tela */
+}
+
+a {
+    margin-top: 20px; /* Espaçamento superior de 20px para links */
+    text-decoration: none; /* Remove a decoração de link padrão */
+    color: #3a3838; /* Cor do texto para links */
+    font-weight: bold; /* Define a fonte em negrito para links */
+}
+
+
+
+.cinzaClaro {
+    background-color: #fff; /* Cor de fundo para a seção de número */
+    padding: 20px; /* Espaçamento interno de 20px */
+    border-radius: 10px; /* Borda arredondada com raio de 10px */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-bottom: 20px; /* Espaçamento inferior de 20px */
+}
+
+/* Estilos do input */
+input[type="text"] {
+    width: 30px; /* Largura do campo de entrada de texto */
+    height: 30px; /* Altura do campo de entrada de texto */
+    text-align: center; /* Alinhamento centralizado do texto */
+    font-size: 18px; /* Tamanho da fonte */
+    border: none; /* Remove a borda */
+    border-bottom: 2px solid #333; /* Adiciona uma borda inferior de 2px sólida */
+    background-color: transparent; /* Fundo transparente */
+    margin: 0 5px; /* Margem horizontal de 5px */
+}
+
+
+/* Estilos do botão */
+.bnt {
+    margin: 5px; /* Margem de 5px em todas as direções */
+    padding: 10px 20px; /* Espaçamento interno de 10px na parte superior e inferior, 20px nas laterais */
+    background-color: #333; /* Cor de fundo para botões */
+    color: #fff; /* Cor do texto */
+    border: none; /* Remove a borda */
+    border-radius: 5px; /* Borda arredondada com raio de 5px */
+    cursor: pointer; /* Altera o cursor para ponteiro ao passar por cima */
+    font-size: 16px; /* Tamanho da fonte */
+    transition: background-color 0.3s ease; /* Transição suave da cor de fundo */
+}
+
+.bnt:hover {
+    background-color: #555; /* Cor de fundo mais escura ao passar o mouse */
+}
+
+.teclado2 {
+    margin-top: 20px; /* Espaçamento superior de 20px */
+}
+
+
+/* Estilos do botão */
+.laranja {
+    background-color: #E67401; /* Cor de fundo laranja */
+}
+
+.verde {
+    background-color: #4CAF50; /* Cor de fundo verde */
+}
+
+.vermelho {
+    background-color: #E53935; /* Cor de fundo vermelha */
+}
+
+/* Responsivo estilo */
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 20px; /* Espaçamento interno de 20px */
+    }
+
+    .cinzaClaro, .branco {
+        width: 100%; /* Largura total */
+    }
+
+    input[type="text"] {
+        width: 25px; /* Largura reduzida para dispositivos menores */
+        height: 25px; /* Altura reduzida para dispositivos menores */
+        font-size: 14px; /* Tamanho da fonte reduzido para dispositivos menores */
+    }
+}

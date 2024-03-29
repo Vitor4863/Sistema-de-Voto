@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Votação</title>
+    <meta charset="UTF-8">
+    <script src="codigo.js"></script> <!-- Inclui o arquivo JavaScript -->
+    <link rel="stylesheet" type="text/css" href="style.css"> <!-- Inclui o arquivo CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/logo-removebg-preview.png" alt="Logo" height="70"> <!-- Insere o logotipo -->
+        </div>
+    </header>
+    <div class="container">
+        <div class="branco"> <!-- Div para o contêiner branco -->
+            <div class="cinzaClaro"> <!-- Div para o contêiner cinza claro -->
+                <p>Número:</p> <!-- Texto para indicar o campo de número -->
+                <!-- Campo de entrada de texto para o número -->
+                <input id="campo" type="text" readonly="readonly" maxlength="2"/>
+            </div>
+            <div class="cinzaEscuro">
+            <!-- Esta div parece estar vazia -->
+            </div>
+            <div class="preto"> <!-- Div para o contêiner preto -->
+                <!-- Botões para inserir números -->
+                <button class="bnt click" onclick="inserir(1)">1</button>
+                <button class="bnt click" onclick="inserir(2)">2</button>
+                <button class="bnt click" onclick="inserir(3)">3</button>
+                <button class="bnt click" onclick="inserir(4)">4</button>
+                <button class="bnt click" onclick="inserir(5)">5</button>
+                <button class="bnt click" onclick="inserir(6)">6</button>
+                <button class="bnt click" onclick="inserir(7)">7</button>
+                <button class="bnt click" onclick="inserir(8)">8</button>
+                <button class="bnt click" onclick="inserir(9)">9</button>
+                <button class="bnt click" onclick="inserir(0)">0</button>
+                <div class="teclado2">
+                    
+                    <button class="laranja  click" onclick="corrige()">CORRIGE</button> <!-- Botão para corrigir o voto -->
+                    <button class="verde" onclick="votar()">CONFIRMA</button> <!-- Botão para confirmar o voto -->
+                </div>
+            </div>
+        </div>
+        <a href="resultado.html">Resultado</a> <!-- Link para a página de resultados -->
+    </div> 
+</body>
+<footer>
+    © 2022 Resultado da Votação. Todos os direitos reservados. <!-- Rodapé -->
+</footer>
+</html>
