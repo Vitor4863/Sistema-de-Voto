@@ -1,3 +1,16 @@
+// Função para atualizar os resultados da votação
+function atualizarResultados() {
+    var resultadoElement = document.getElementById("resultado"); // Obtém o elemento onde os resultados serão exibidos
+
+    // Loop através dos candidatos (assumindo que há 100 candidatos numerados de 0 a 99)
+    for (var i = 0; i < 100; i++) {
+        var votos = sessionStorage.getItem(i); // Obtém o número de votos para o candidato atual
+        if (votos !== null) { // Verifica se há votos registrados para o candidato atual
+            resultadoElement.innerHTML += "Candidato " + i + " tem " + votos + " votos<br/>"; // Exibe os resultados para o candidato atual
+        }
+    }
+}
+
 // Esta função é chamada quando um botão numérico é clicado para inserir um valor no campo de votação
 function inserir(valor) {
     var campo = document.getElementById("campo"); // Obtém o elemento de entrada de texto onde os números são inseridos
@@ -27,6 +40,9 @@ function votar() {
 
         alert("Confirmado voto no candidato " + candidato); // Exibe um alerta confirmando o voto
         campo.value = ""; // Limpa o campo de votação após o voto ser registrado
+
+        // Atualiza os resultados após o voto ser registrado
+        atualizarResultados();
     } else {
         alert("Por favor, insira um número de candidato válido."); // Exibe um alerta se o número inserido não for válido
     }
@@ -37,11 +53,9 @@ function resultado() {
     var resultadoElement = document.getElementById("resultado"); // Obtém o elemento onde os resultados serão exibidos
     resultadoElement.innerHTML = ""; // Limpa qualquer conteúdo anterior do elemento
 
-    // Loop através dos candidatos (assumindo que há 100 candidatos numerados de 0 a 99)
-    for (var i = 0; i < 100; i++) {
-        var votos = sessionStorage.getItem(i); // Obtém o número de votos para o candidato atual
-        if (votos !== null) { // Verifica se há votos registrados para o candidato atual
-            resultadoElement.innerHTML += "Candidato " + i + " tem " + votos + " votos<br/>"; // Exibe os resultados para o candidato atual
-        }
-    }
+    // Atualiza os resultados da votação
+    atualizarResultados();
 }
+
+// Atualiza os resultados automaticamente a cada 5 segundos
+setInterval(resultado, 5000);
